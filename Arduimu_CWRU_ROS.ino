@@ -17,6 +17,14 @@
 #include <FastSerial.h>		// ArduPilot Fast Serial Library
 #include <AP_GPS.h>			// ArduPilot GPS library
 
+// EJK: NOTE!! I've set up the EM406 GPS module using the SirfDemo software:
+//    - 57600 baud
+//    - NMEA
+//    - 1Hz GGA <- Position message
+//    - 1Hz ... <- Whatever the velocity message is
+//    - 1Hz ... <- Whatever the status message is
+// Go into the library for AP_GPS_NMEA.cpp and comment out all of the "bs->print_P" messages
+// inside the init function
 
 //**********************************************************************
 //  This section contains USER PARAMETERS !!!
